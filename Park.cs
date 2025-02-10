@@ -1,17 +1,17 @@
-/*
- * Добавление новых животных (Имя, уровень энергии, Способность издавать звук, играть и есть)
- * Кормление выбранного животного (отображение списка всех животных с номерами, обращение по номеру) 
- * Просмотр списка всех животных 
- * Выход из приложения 
+п»ї/*
+ * Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІС‹С… Р¶РёРІРѕС‚РЅС‹С… (РРјСЏ, СѓСЂРѕРІРµРЅСЊ СЌРЅРµСЂРіРёРё, РЎРїРѕСЃРѕР±РЅРѕСЃС‚СЊ РёР·РґР°РІР°С‚СЊ Р·РІСѓРє, РёРіСЂР°С‚СЊ Рё РµСЃС‚СЊ)
+ * РљРѕСЂРјР»РµРЅРёРµ РІС‹Р±СЂР°РЅРЅРѕРіРѕ Р¶РёРІРѕС‚РЅРѕРіРѕ (РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ СЃРїРёСЃРєР° РІСЃРµС… Р¶РёРІРѕС‚РЅС‹С… СЃ РЅРѕРјРµСЂР°РјРё, РѕР±СЂР°С‰РµРЅРёРµ РїРѕ РЅРѕРјРµСЂСѓ) 
+ * РџСЂРѕСЃРјРѕС‚СЂ СЃРїРёСЃРєР° РІСЃРµС… Р¶РёРІРѕС‚РЅС‹С… 
+ * Р’С‹С…РѕРґ РёР· РїСЂРёР»РѕР¶РµРЅРёСЏ 
  * 
- * Реализовать Интерфейс IAnimal
- * Создать базовый класс Animal
- * Реализовать наследование для конкретных видов животных
- * Хранить животных в List<IAnimal>
+ * Р РµР°Р»РёР·РѕРІР°С‚СЊ РРЅС‚РµСЂС„РµР№СЃ IAnimal
+ * РЎРѕР·РґР°С‚СЊ Р±Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ Animal
+ * Р РµР°Р»РёР·РѕРІР°С‚СЊ РЅР°СЃР»РµРґРѕРІР°РЅРёРµ РґР»СЏ РєРѕРЅРєСЂРµС‚РЅС‹С… РІРёРґРѕРІ Р¶РёРІРѕС‚РЅС‹С…
+ * РҐСЂР°РЅРёС‚СЊ Р¶РёРІРѕС‚РЅС‹С… РІ List<IAnimal>
  * 
- * Проверять корректность ввода пользователя
- * Обрабатывать случай пустого зоопарка
- * Проверять границы при выборе номера животного
+ * РџСЂРѕРІРµСЂСЏС‚СЊ РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚СЊ РІРІРѕРґР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+ * РћР±СЂР°Р±Р°С‚С‹РІР°С‚СЊ СЃР»СѓС‡Р°Р№ РїСѓСЃС‚РѕРіРѕ Р·РѕРѕРїР°СЂРєР°
+ * РџСЂРѕРІРµСЂСЏС‚СЊ РіСЂР°РЅРёС†С‹ РїСЂРё РІС‹Р±РѕСЂРµ РЅРѕРјРµСЂР° Р¶РёРІРѕС‚РЅРѕРіРѕ
  */
 
 using System;
@@ -61,20 +61,20 @@ namespace ZooPark
 
         public override void MakeSound()
         {
-            Console.WriteLine("Ррррррр!!!");
+            Console.WriteLine("Р СЂСЂСЂСЂСЂСЂ!!!");
         }
 
         public override void Eat()
         {
             Energy += 20;
-            Console.WriteLine($"{Name} поел и восстановил 20 энергии!");
+            Console.WriteLine($"{Name} РїРѕРµР» Рё РІРѕСЃСЃС‚Р°РЅРѕРІРёР» 20 СЌРЅРµСЂРіРёРё!");
 
         }
 
         public override void Gaming()
         {
             Energy -= 20;
-            Console.WriteLine($"{Name} поиграл и устал на 20 энергии!");
+            Console.WriteLine($"{Name} РїРѕРёРіСЂР°Р» Рё СѓСЃС‚Р°Р» РЅР° 20 СЌРЅРµСЂРіРёРё!");
         }
     }
 
@@ -84,19 +84,19 @@ namespace ZooPark
 
         public override void MakeSound()
         {
-            Console.WriteLine("*Мычит что-то*");
+            Console.WriteLine("*РњС‹С‡РёС‚ С‡С‚Рѕ-С‚Рѕ*");
         }
 
         public override void Eat()
         {
             Energy += 15;
-            Console.WriteLine($"{Name} поел и восстановил 15 энергии!");
+            Console.WriteLine($"{Name} РїРѕРµР» Рё РІРѕСЃСЃС‚Р°РЅРѕРІРёР» 15 СЌРЅРµСЂРіРёРё!");
         }
 
         public override void Gaming()
         {
             Energy -= 20;
-            Console.WriteLine($"{Name} поиграл и устал на 20 энергии!");
+            Console.WriteLine($"{Name} РїРѕРёРіСЂР°Р» Рё СѓСЃС‚Р°Р» РЅР° 20 СЌРЅРµСЂРіРёРё!");
         }
     }
 
@@ -109,12 +109,12 @@ namespace ZooPark
         {
             while (true)
             {
-                Console.WriteLine("Выберите действие: \n");
-                Console.WriteLine("1. Добавить новое животное");
-                Console.WriteLine("2. Кормить животное");
-                Console.WriteLine("3. Просмотреть список животных");
-                Console.WriteLine("4. Поиграть с животным");
-                Console.WriteLine("5. Закрыть программу\n");
+                Console.WriteLine("Р’С‹Р±РµСЂРёС‚Рµ РґРµР№СЃС‚РІРёРµ: \n");
+                Console.WriteLine("1. Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІРѕРµ Р¶РёРІРѕС‚РЅРѕРµ");
+                Console.WriteLine("2. РљРѕСЂРјРёС‚СЊ Р¶РёРІРѕС‚РЅРѕРµ");
+                Console.WriteLine("3. РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ СЃРїРёСЃРѕРє Р¶РёРІРѕС‚РЅС‹С…");
+                Console.WriteLine("4. РџРѕРёРіСЂР°С‚СЊ СЃ Р¶РёРІРѕС‚РЅС‹Рј");
+                Console.WriteLine("5. Р—Р°РєСЂС‹С‚СЊ РїСЂРѕРіСЂР°РјРјСѓ\n");
 
                 string choice = Console.ReadLine();
 
@@ -140,7 +140,7 @@ namespace ZooPark
                         return;
 
                     default:
-                        Console.WriteLine("Не корректный ввод, попробуйте снова\n");
+                        Console.WriteLine("РќРµ РєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ, РїРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°\n");
                         break;
                 }
 
@@ -150,15 +150,15 @@ namespace ZooPark
 
         static void AddAnimal()
         {
-            Console.WriteLine("Введите имя животного: ");
+            Console.WriteLine("Р’РІРµРґРёС‚Рµ РёРјСЏ Р¶РёРІРѕС‚РЅРѕРіРѕ: ");
             string name = Console.ReadLine();
-            Console.WriteLine("Выберите тип животного (1 - Хищник, 2 - Травоядное):\n");
+            Console.WriteLine("Р’С‹Р±РµСЂРёС‚Рµ С‚РёРї Р¶РёРІРѕС‚РЅРѕРіРѕ (1 - РҐРёС‰РЅРёРє, 2 - РўСЂР°РІРѕСЏРґРЅРѕРµ):\n");
             string type = Console.ReadLine();
 
             IAnimal animal = type switch
             {
-                "1" => new Predator(name + " Хищник"),
-                "2" => new Herbivore(name + " Травоядное"),
+                "1" => new Predator(name + " РҐРёС‰РЅРёРє"),
+                "2" => new Herbivore(name + " РўСЂР°РІРѕСЏРґРЅРѕРµ"),
                 _ => null
             };
 
@@ -166,11 +166,11 @@ namespace ZooPark
             if (animal != null)
             {
                 animals.Add(animal);
-                Console.WriteLine($"{animal.Name}  добавлен в зоопарк!\n");
+                Console.WriteLine($"{animal.Name}  РґРѕР±Р°РІР»РµРЅ РІ Р·РѕРѕРїР°СЂРє!\n");
             }
             else
             {
-                Console.WriteLine("Некорректный ввод типа животного\n");
+                Console.WriteLine("РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ С‚РёРїР° Р¶РёРІРѕС‚РЅРѕРіРѕ\n");
             }
         }
 
@@ -178,19 +178,19 @@ namespace ZooPark
         {
             if (animals.Count == 0)
             {
-                Console.WriteLine("Зоопарк пуст! Добавьте животных!\n");
+                Console.WriteLine("Р—РѕРѕРїР°СЂРє РїСѓСЃС‚! Р”РѕР±Р°РІСЊС‚Рµ Р¶РёРІРѕС‚РЅС‹С…!\n");
                 return;
             }
             ViewAnimals();
 
-            Console.WriteLine("Введите номер животного, которое хотите покормить:\n");
+            Console.WriteLine("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ Р¶РёРІРѕС‚РЅРѕРіРѕ, РєРѕС‚РѕСЂРѕРµ С…РѕС‚РёС‚Рµ РїРѕРєРѕСЂРјРёС‚СЊ:\n");
             if (int.TryParse(Console.ReadLine(), out int index) && index > 0 && index <= animals.Count)
             {
                 animals[index - 1].Eat();
             }
             else
             {
-                Console.WriteLine("Не корректный номер животного!\n");
+                Console.WriteLine("РќРµ РєРѕСЂСЂРµРєС‚РЅС‹Р№ РЅРѕРјРµСЂ Р¶РёРІРѕС‚РЅРѕРіРѕ!\n");
             }
         }
 
@@ -198,14 +198,14 @@ namespace ZooPark
         {
             if (animals.Count == 0)
             {
-                Console.WriteLine("Зоопарк пуст!\n");
+                Console.WriteLine("Р—РѕРѕРїР°СЂРє РїСѓСЃС‚!\n");
                 return;
             }
 
-            Console.WriteLine("Список животных в зоопарке: \n");
+            Console.WriteLine("РЎРїРёСЃРѕРє Р¶РёРІРѕС‚РЅС‹С… РІ Р·РѕРѕРїР°СЂРєРµ: \n");
             for (int i = 0; i < animals.Count; i++)
             {
-                Console.WriteLine($"{i + 1}.{animals[i].Name} (Энергия: {animals[i].Energy})\n");
+                Console.WriteLine($"{i + 1}.{animals[i].Name} (Р­РЅРµСЂРіРёСЏ: {animals[i].Energy})\n");
             }
         }
 
@@ -213,14 +213,14 @@ namespace ZooPark
         {
             if(animals.Count == 0)
             {
-                Console.WriteLine("Зоопарк пуст!\n");
+                Console.WriteLine("Р—РѕРѕРїР°СЂРє РїСѓСЃС‚!\n");
                 return;
             }
 
-            Console.WriteLine("Выберите животное с которым хотите поиграть: \n");
+            Console.WriteLine("Р’С‹Р±РµСЂРёС‚Рµ Р¶РёРІРѕС‚РЅРѕРµ СЃ РєРѕС‚РѕСЂС‹Рј С…РѕС‚РёС‚Рµ РїРѕРёРіСЂР°С‚СЊ: \n");
             for (int i = 0; i < animals.Count; i++)
             {
-                Console.WriteLine($"{i + 1}.{animals[i].Name} (Энергия: {animals[i].Energy})\n");
+                Console.WriteLine($"{i + 1}.{animals[i].Name} (Р­РЅРµСЂРіРёСЏ: {animals[i].Energy})\n");
             }
             if (int.TryParse(Console.ReadLine(), out int index) && index > 0 && index <= animals.Count)
             {
@@ -228,7 +228,7 @@ namespace ZooPark
             }
             else
             {
-                Console.WriteLine("Не корректный номер животного!\n");
+                Console.WriteLine("РќРµ РєРѕСЂСЂРµРєС‚РЅС‹Р№ РЅРѕРјРµСЂ Р¶РёРІРѕС‚РЅРѕРіРѕ!\n");
             }
 
         }
